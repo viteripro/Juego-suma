@@ -18,6 +18,44 @@ function comenzar(){
    respuesta = num1 + num2;
 
    txt_suma.innerHTML = num1 + " + " + num2 + " = ";
+
+   indiceOpCorrecta=Math.round(Math.random()*2);
+   if(indiceOpCorrecta==0){
+      op1.innerHTML = respuesta;
+      op2.innerHTML = respuesta + 1;
+      op3.innerHTML = respuesta - 1;    
+   }
+   if(indiceOpCorrecta==1){
+    op2.innerHTML = respuesta;
+    op1.innerHTML = respuesta + 2;
+    op3.innerHTML = respuesta - 1;    
+ }
+ if(indiceOpCorrecta==2){
+  op3.innerHTML = respuesta;
+  op1.innerHTML = respuesta + 1;
+  op2.innerHTML = respuesta - 1;    
+}
+
+}
+
+
+function controlarRespuesta(opcionElegida) {
+  txt_resultado.innerHTML=opcionElegida.innerHTML;
+  
+  if(respuesta == opcionElegida.innerHTML){
+      txt_msj.innerHTML= "EXCELENTE!!";
+      txt_msj.style.color="green";
+      setTimeout(comenzar, 2000);    
+  }else{
+    txt_msj.innerHTML="INTENTA DE NUEVO!!";
+    txt_msj.style.color="red";
+    setTimeout(limpiar,2000);
+  }
+}
+
+function limpiar(){
+    txt_resultado.innerHTML="?";   
+    txt_msj.innerHTML=""; 
 }
 
 comenzar();
