@@ -15,7 +15,7 @@ function comenzar(){
 
    n1 = Math.round(Math.random()*9);
    n2 = Math.round(Math.random()*9);
-   resp = num1 + num2;
+   resp = n1 + n2;
 
    txt_suma.innerHTML = `${n1} + ${n2} =`;
 
