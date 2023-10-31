@@ -2,9 +2,9 @@
 He realizado un proyecto interactivo en el que se debe adivinar el resultado de la suma de dos valores y dependiendo de lo que se eliga mostrara un resultado u otro
 
 ## Tecnologias
-HTML
-CSS
-JAVASCRPT
+- HTML
+- CSS
+- JAVASCRPT
 
 ## Autor
 **Luis Viteri**
