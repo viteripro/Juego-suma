@@ -1,39 +1,39 @@
-var num1, num2;
-var respuesta;
+var n1, n2;
+var resp;
 var indiceOpCorrecta;
 
-txt_suma=document.getElementById("suma");
-op1=document.getElementById("op1");
-op2=document.getElementById("op2");
-op3=document.getElementById("op3");
-txt_msj=document.getElementById("msj");
-txt_resultado=document.getElementById("resultado");
+txt_suma=document.querySelector("#suma");
+op1=document.querySelector("#op1");
+op2=document.querySelector("#op2");
+op3=document.querySelector("#op3");
+txt_msj=document.querySelector("#msj");
+txt_resultado=document.querySelector("#resultado");
 
 function comenzar(){
    txt_resultado.innerHTML ="?"; 
    txt_msj.innerHTML = "";   
 
-   num1 = Math.round(Math.random()*9);
-   num2 = Math.round(Math.random()*9);
-   respuesta = num1 + num2;
+   n1 = Math.round(Math.random()*9);
+   n2 = Math.round(Math.random()*9);
+   resp = num1 + num2;
 
-   txt_suma.innerHTML = num1 + " + " + num2 + " = ";
+   txt_suma.innerHTML = `${n1} + ${n2} =`;
 
    indiceOpCorrecta=Math.round(Math.random()*2);
-   if(indiceOpCorrecta==0){
-      op1.innerHTML = respuesta;
-      op2.innerHTML = respuesta + 1;
-      op3.innerHTML = respuesta - 1;    
+   if(indiceOpCorrecta===0){
+      op1.innerHTML = resp;
+      op2.innerHTML = resp + 1;
+      op3.innerHTML = resp - 1;    
    }
-   if(indiceOpCorrecta==1){
-    op2.innerHTML = respuesta;
-    op1.innerHTML = respuesta + 2;
-    op3.innerHTML = respuesta - 1;    
+   if(indiceOpCorrecta===1){
+    op2.innerHTML = resp;
+    op1.innerHTML = resp + 2;
+    op3.innerHTML = resp - 1;    
  }
- if(indiceOpCorrecta==2){
-  op3.innerHTML = respuesta;
-  op1.innerHTML = respuesta + 1;
-  op2.innerHTML = respuesta - 1;    
+ if(indiceOpCorrecta===2){
+  op3.innerHTML = resp;
+  op1.innerHTML = resp + 1;
+  op2.innerHTML = resp - 1;    
 }
 
 }
@@ -42,7 +42,7 @@ function comenzar(){
 function controlarRespuesta(opcionElegida) {
   txt_resultado.innerHTML=opcionElegida.innerHTML;
   
-  if(respuesta == opcionElegida.innerHTML){
+  if(resp == opcionElegida.innerHTML){
       txt_msj.innerHTML= "EXCELENTE!!";
       txt_msj.style.color="green";
       setTimeout(comenzar, 2000);    
