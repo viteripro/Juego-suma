@@ -1,34 +1,40 @@
-*{
+ *{
     margin: 0;
     box-sizing: border-box;
 }
 
 body{
     text-align: center;
-    background-color: #333;
-    color: #262626;
+    background-image: url(img/fondo_pizarra.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
 }
 
 h1{
     padding: 30px;
+    font-family: sans-serif;
 }
 
 .container{
-    background-color: #ffc562;
+    background-image: linear-gradient(143deg, rgb(143, 228, 127) 5%,rgb(6, 73, 15));
     max-width: 700px;
     margin: auto;
-    border: 2px solid #000;
+    border: 5px solid #583501;
     border-radius: 20px;
     display: flex;
     padding: 50px 0;
+    box-shadow: 1em 1em 1em black;
 }
 
 .izquierdo{
     width: 70%;
-    font-size: 80px;
+    font-size: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color: white;
+    font-family: 'Rubik Dirt', 'sans serif';
 }
 
 .derecha{
@@ -39,7 +45,8 @@ h1{
 .msj{
     font-size: 40px;
     height: 50px;
-}
+    font-family: 'Rubik Dirt','sans-serif';
+  }
 
 .opcion{
     width: 80px;
@@ -49,11 +56,12 @@ h1{
     margin-bottom: 20px;
     border-radius: 50%;
     cursor: pointer;
-    background-color: #000;
+    background-color: #1c8ba7;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Rubik Dirt',sans-serif;
 }
 
 .opcion:hover{
